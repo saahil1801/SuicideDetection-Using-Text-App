@@ -1,0 +1,11 @@
+NumPy
+pandas
+TensorFlow
+Keras
+scikit-learn
+tqdm
+neattext
+pickle
+streamlit
+pandas
+plotly.express
