@@ -4,6 +4,10 @@
 
 This project aims to leverage machine learning to detect potential suicide ideation in text data. Using a dataset of text entries classified as either reflecting suicide ideation or not, we build and train a neural network model to predict the likelihood that a given text indicates suicidal thoughts. The model utilizes pre-trained GloVe embeddings for text representation and a LSTM neural network for classification.
 
+![Screenshot 2024-03-03 024341](https://github.com/saahil1801/SuicideDetection-Using-Text-DLApp/assets/84408557/5aef6e25-5ae6-47dc-a8d1-daeeadd5c36a)
+
+![Screenshot 2024-03-03 024408](https://github.com/saahil1801/SuicideDetection-Using-Text-DLApp/assets/84408557/2e118aba-73fb-44b4-8513-be8e41164a4e)
+
 ## Features
 
 - Text preprocessing including cleaning, tokenization, and padding.
