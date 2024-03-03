@@ -1,4 +1,4 @@
-# Suicide Detection with Machine Learning
+# Suicide Ideation Detection with Deep Learning
 
 ## Project Overview
 
