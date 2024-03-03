@@ -22,20 +22,21 @@ if __name__ == '__main__':
 
         # Predict the ideation
         prediction = model.predict(twt)[0][0]
+        st.warning(prediction)
         # Print the prediction
-        if(prediction > 0.5):
-             st.warning("Potential Suicide Post")
+        if(prediction < 0.5):
+             st.warning("Non Suicide Post")
         else:
-            st.success("Non Suicide Post")
+            st.warning("Potential Suicide Post")
         class_label = ["Potential Suicide Post","Non Suicide Post"]
         prob_list = [prediction*100,100-prediction*100]
         prob_dict = {"Potential Suicide Post/Non Suicide Post":class_label,"Probability":prob_list}
         df_prob = pd.DataFrame(prob_dict)
         fig = px.bar(df_prob, x='Potential Suicide Post/Non Suicide Post', y='Probability')
         model_option = "SuicideDetection"
-        if prediction > 0.5:
+        if prediction <  0.5:
             fig.update_layout(title_text="{} model - prediction probability comparison between Potential Suicide Post and Non Suicide Post".format(model_option))
-            st.info("The {} model predicts that there is a higher {} probability that the post content is Potential Suicide Post compared to a {} probability of being Non Suicide Post".format(model_option,prediction*100,100-prediction*100))
+            st.info("The {} model predicts that there is a higher {} probability that the post content is Non-Potential Suicide Post compared to a {} probability of being Potential Suicide Post".format(model_option,100-prediction*100,prediction*100))
         else:
             fig.update_layout(title_text="{} model - prediction probability comparison between Potential Suicide Post and Non Suicide Post".format(model_option))
             st.info("Your post content is rather abstract, The {} model predicts that there a almost equal {} probability that the post content is Potential Suicide Post compared to a {} probability of being Non Suicide Post".format(model_option,prediction*100,100-prediction*100))
