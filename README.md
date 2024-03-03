@@ -1,1 +1,0 @@
-# SuicideDetection-Using-Text-App
