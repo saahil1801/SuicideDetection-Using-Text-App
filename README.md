@@ -8,6 +8,8 @@ This project aims to leverage machine learning to detect potential suicide ideat
 
 ![Screenshot 2024-03-03 024408](https://github.com/saahil1801/SuicideDetection-Using-Text-DLApp/assets/84408557/2e118aba-73fb-44b4-8513-be8e41164a4e)
 
+## Caution : Download glove.840B.300d.pkl before running the repo
+
 ## Features
 
 - Text preprocessing including cleaning, tokenization, and padding.
